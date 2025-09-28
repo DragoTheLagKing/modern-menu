@@ -60,7 +60,7 @@ body {
     position: absolute;
     inset: 0; 
     border-radius: inherit;
-    background: conic-gradient(from var(--angle), transparent 80%, #F54927);
+    background: conic-gradient(from var(--angle1), transparent 80%, #F54927);
     animation: spin 3s linear infinite;
     z-index: -2;
 }
@@ -80,7 +80,7 @@ body {
     position: absolute;
     inset: 0; 
     border-radius: inherit;
-    background: conic-gradient(from var(--angle), transparent 80%, #004ce8);
+    background: conic-gradient(from var(--angle2), transparent 80%, #004ce8);
     animation: spin 3s linear infinite;
     z-index: -2;
 }
@@ -99,7 +99,7 @@ body {
     position: absolute;
     inset: 0; 
     border-radius: inherit;
-    background: conic-gradient(from var(--angle), transparent 80%, #f3c021);
+    background: conic-gradient(from var(--angle3), transparent 80%, #f3c021);
     animation: spin 3s linear infinite;
     z-index: -2;
 }
@@ -143,17 +143,40 @@ body {
 }
 
 /* ----------------- CSS Variables & Animation ----------------- */
-@property --angle {
+@property --angle1 {
     syntax: "<angle>";
     inherits: false;
     initial-value: 0deg;
 }
+@property --angle2 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 100deg;
+}
+@property --angle3 {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 200deg;
+}
 
 @keyframes spin {
     from {
-        --angle: 0deg;
+        --angle1: 0deg;
     }
     to {
-        --angle: 360deg;
+        --angle1: 360deg;
+    }
+    from {
+        --angle2: 100deg;
+    }
+    to {
+        --angle2: 460deg;
+    }
+    from {
+        --angle3: 200deg;
+    }
+    to {
+        --angle3: 560deg;
     }
 }
+
