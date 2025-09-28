@@ -1,0 +1,159 @@
+:root {
+    --main-bg-color: #020617;
+    --main-text-color: white;
+}
+
+/* ----------------- Body ----------------- */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------- Title ----------------- */
+.title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ----------------- Container ----------------- */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #091133;
+    height: 80vh;
+    width: 950px;
+    margin: auto;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+/* ----------------- Options ----------------- */
+.option1, .option2, .option3 {
+    position: relative;
+    width: 250px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; /* make icon above text */
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: all 0.5s ease, transform 0.3s ease;
+    cursor: pointer;
+    color: white;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* ----------------- Option 1 Gradient ----------------- */
+.option1::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), transparent 80%, #F54927);
+    animation: spin 3s linear infinite;
+    z-index: -2;
+}
+
+.option1::after {
+    content: "";
+    position: absolute;
+    inset: 5px; 
+    border-radius: inherit;
+    background-color: rgb(7, 4, 25);
+    z-index: -1;
+}
+
+/* ----------------- Option 2 Gradient ----------------- */
+.option2::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), transparent 80%, #004ce8);
+    animation: spin 3s linear infinite;
+    z-index: -2;
+}
+.option2::after {
+    content: "";
+    position: absolute;
+    inset: 5px; 
+    border-radius: inherit;
+    background-color: rgb(7, 4, 25);
+    z-index: -1;
+}
+
+/* ----------------- Option 3 Gradient ----------------- */
+.option3::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    border-radius: inherit;
+    background: conic-gradient(from var(--angle), transparent 80%, #f3c021);
+    animation: spin 3s linear infinite;
+    z-index: -2;
+}
+.option3::after {
+    content: "";
+    position: absolute;
+    inset: 5px; 
+    border-radius: inherit;
+    background-color: rgb(7, 4, 25);
+    z-index: -1;
+}
+
+/* ----------------- Colors ----------------- */
+.option1 {
+    color: #F54927;
+}
+.option2 {
+    color: #004ce8;
+}
+.option3{
+    color: #f3c021;
+}
+/* ----------------- Hover & Active ----------------- */
+.option1:hover, .option2:hover, .option3:hover {
+    transform: scale(1.05);
+}
+
+.option1:active, .option2:active, .option3:active {
+    transform: scale(0.95);
+}
+
+.option1:active::after, .option2:active::after, .option3:active::after {
+    background-color: rgb(6, 3, 20);
+}
+
+/* ----------------- Icon ----------------- */
+.icon {
+    width: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* ----------------- CSS Variables & Animation ----------------- */
+@property --angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
