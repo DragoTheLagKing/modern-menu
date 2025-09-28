@@ -61,7 +61,7 @@ body {
     inset: 0; 
     border-radius: inherit;
     background: conic-gradient(from var(--angle1), transparent 80%, #F54927);
-    animation: spin 3s linear infinite;
+    animation: spin 8s linear infinite;
     z-index: -2;
 }
 
@@ -81,7 +81,7 @@ body {
     inset: 0; 
     border-radius: inherit;
     background: conic-gradient(from var(--angle2), transparent 80%, #004ce8);
-    animation: spin 3s linear infinite;
+    animation: spin 8s linear infinite;
     z-index: -2;
 }
 .option2::after {
@@ -100,7 +100,7 @@ body {
     inset: 0; 
     border-radius: inherit;
     background: conic-gradient(from var(--angle3), transparent 80%, #f3c021);
-    animation: spin 3s linear infinite;
+    animation: spin 8s linear infinite;
     z-index: -2;
 }
 .option3::after {
@@ -179,4 +179,5 @@ body {
         --angle3: 560deg;
     }
 }
+
 
