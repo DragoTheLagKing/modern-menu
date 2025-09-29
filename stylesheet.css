@@ -33,6 +33,7 @@ body {
     margin: auto;
     border-radius: 20px;
     z-index: 1;
+    user-select: none;;
 }
 
 /* ----------------- Options ----------------- */
@@ -52,6 +53,7 @@ body {
     color: white;
     z-index: 0;
     overflow: hidden;
+    padding-top: 30px;
 }
 
 /* ----------------- Option 1 Gradient ----------------- */
@@ -139,7 +141,8 @@ body {
 .icon {
     width: 50px;
     margin-bottom: 20px;
-    display: block;
+    position: absolute;
+    top: 30px;
 }
 
 /* ----------------- CSS Variables & Animation ----------------- */
@@ -180,4 +183,30 @@ body {
     }
 }
 
+/* ----------------- Descriptions ----------------- */
+.description {
+    font-size: 0.8em;
+    padding: 10px;
+    padding-top: 0;
+    font-weight: normal;
+    line-height: 1.4em;
+    text-align: center;
+    color: #ccc;
+    max-width: 220px;
+    user-select: none;
+    margin-top: -10px;
+    flex-grow: 1;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #555 transparent;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    position: absolute;
+    bottom: 100px;
+}
 
+.titles {
+    vertical-align: middle;
+    position: absolute;
+    top: 70px;
+}
